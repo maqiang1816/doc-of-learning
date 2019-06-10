@@ -126,9 +126,10 @@ Footer部分只用于两种情况
 
 还有一种特殊情况，如果当前 commit 用于撤销以前的 commit，则必须以revert:开头，后面跟着被撤销 Commit 的 Header
 
-Body部分的格式是固定的，必须写成`This reverts commit <hash>.`，其中的hash是被撤销 commit 的 HSHA 标识符。
+Body部分的格式是固定的，必须写成`This reverts commit <hash>.`，其中的hash是被撤销 commit 的 SHA 标识符。
 
 ## 安装 commitlint 校验
+
 [commitlint官网](https://commitlint.js.org/)
 
 [config-conventional校验配置](http://npm.taobao.org/package/@commitlint/config-conventional)
@@ -158,7 +159,7 @@ npm install --save-dev @commitlint/cli @commitlint/config-conventional
 echo "module.exports = {extends: ['@commitlint/config-conventional']}" > .commitlintrc.js
 ```
 
-### 添加`git hooks`配置
+### 添加 git hooks 配置
 
 安装完`husky`后，在`package.json`文件添加如下配置
 
