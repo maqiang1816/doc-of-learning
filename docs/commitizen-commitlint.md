@@ -12,7 +12,7 @@ commitizen就是这么样一款工具,它用来规范化我们的commit信息。
 执行如下命令全局安装`commitizen`工具
 
 ``` bash
-sudo npm instal -g commitizen
+sudo npm install -g commitizen
 ```
 
 ### 全局使用Angular项目commit规范
@@ -73,7 +73,7 @@ npm init -y
 
 上面是一次Commit后Message格式规范，分成标题，内容详情，结尾三个部分，各有各的用处，没有多余项。
 
-头部即首行，是可以直接在页面中预览的部分，入上面图中所示，一共有三个部分`<type>，<scope>，<subject>`，含义分别如下
+头部即首行，是可以直接在页面中预览的部分，如上面图中所示，一共有三个部分`<type>，<scope>，<subject>`，含义分别如下
 
 ### Type
 
@@ -84,7 +84,7 @@ npm init -y
 * docs: 文档修改
 * style: 格式(不影响代码运行的改动)
 * refactor: 重构(既不是新增功能，也不是修改bug的代码改动)
-* perf: 代码优化(提高性能的代码改动) 
+* perf: 代码优化(提高性能的代码改动)
 * test: 增加遗漏或修正现有的测试用例
 * build: 影响到构建过程或外部依赖的改动
 * ci: ci配置文件及脚本的改动
@@ -108,7 +108,7 @@ npm init -y
 该部分是对本次 commit 的详细描述，可以分成多行。有两个注意点
 
 * 使用第一人称现在时
-* 应该说明代码变动的动机以及与以前行为的对比
+* 应该说明代码变动的动机以及与之前行为的对比
 
 ### Footer
 
@@ -116,11 +116,11 @@ Footer部分只用于两种情况
 
 * 不兼容变动
   
-> 如果当前代码与上一个版本不兼容，则 Footer 部分以BREAKING CHANGE开头，后面是对变动的描述、以及变动理由和迁移方法
+> 如果当前代码与上一个版本不兼容，则 Footer 部分以 BREAKING CHANGE 开头，后面是对变动的描述、以及变动理由和迁移方法
 
 * 关闭issue
   
-> 如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue (可依次关闭过个issueCloses #123, #245, #992)
+> 如果当前 commit 针对某个issue，那么可以在 Footer 部分关闭这个 issue (可依次关闭各个issue Closes #123, #245, #992)
 
 ### Revert
 
@@ -210,14 +210,14 @@ conventional-changelog -p angular -i CHANGELOG.md -w
 如果你想生成所有发布的 Change log，要改为运行下面的命令。
 
 ```bash
-conventional-changelog -p angular -i CHANGELOG.md -w -r 0
+conventional-changelog -p angular -i CHANGELOG.md -s -r 0
 ```
 
 为了方便使用，可以将其写入package.json的scripts字段。
 
 ``` javascript
 "scripts": {
-  "changelog": "conventional-changelog -p angular -i CHANGELOG.md -w -r 0"
+  "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
 }
 ```
 
